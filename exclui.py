@@ -11,3 +11,6 @@ cursor.execute(
     """,
     id
 )
+
+conexao.commit()
+print("Dados excluídos com sucesso")

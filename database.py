@@ -6,7 +6,7 @@ cursor = conexao.cursor()
 
 cursor.execute(
     """
-    create table Filmes if not exists(
+    CREATE TABLE IF NOT EXISTS Filmes(
         id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
         nome TEXT NOT NULL,
         ano INTEGER NOT NULL,
@@ -17,3 +17,18 @@ cursor.execute(
 
 conexao.close()
 print('Tabela criada com sucesso!')
+
+def criar_tabela():
+    
+  cursor.execute(
+    """
+    CREATE TABLE Filmes(
+        id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+        nome TEXT NOT NULL,
+        ano INTEGER NOT NULL,
+        nota REAL NOT NULL
+    );
+    """
+)
+
+conexao.close()
