@@ -24,7 +24,7 @@ def insere_dados(nome, ano, nota):
 def obter_dados():
     conexao = connect_db()
     cursor = conexao.cursor()
-    cursor.execute("""SELECT * FROM Filmes""")
+    cursor.execute("""SELECT * FROM Filmes;""")
     dados = cursor.fetchall()
     cursor.close()
     return dados
